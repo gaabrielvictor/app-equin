@@ -207,6 +207,21 @@ function atualizarContador8() {
 
 let intervalo8 = setInterval(atualizarContador8, 1000)
 
+var contadorElemento = document.getElementById("numero");
+var numero = 0;
+
+function aumentar() {
+  numero++;
+  contadorElemento.innerText = numero;
+}
+function zerar() {
+  numero = 0;
+  contadorElemento.innerText = numero;
+}
+
+
+
+
 const button = document.querySelector('.btn1')
 const popup = document.querySelector('.popup-wrapper')
 const popupMain = document.querySelector('.popup')
@@ -229,7 +244,9 @@ popup.addEventListener('click', event => {
   }
 })
 
+
 function funcaoLance()
 {
-alert("Lance dado com sucesso!");
+  alert("Lance dado com sucesso!");
 }
+
