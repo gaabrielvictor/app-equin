@@ -6,6 +6,7 @@ navBar.addEventListener('click', () =>{
     navMenu.classList.toggle('active');
 })
 
+
 let tempoAtual = 259200;
 
 function atualizarContador() {
@@ -219,7 +220,31 @@ function zerar() {
   contadorElemento.innerText = numero;
 }
 
+function notificaLeilao(){
+  if (window.Notification&&Notification.permission!=="denied"){
+    Notification.requestPermission(function(status){
+      let n = new Notification ('O leilão começa em breve... ',{
+      body: 'Você será notificado quando o leilão começar !'
+    })
+    })
+  }
+}
 
+var contadorElemento = document.getElementById("numero");
+var numero = 0;
+
+const button1 = document.querySelector('.btn0')
+const modal = document.querySelector('dialog')
+const buttonCLose = document.querySelector('.btnClose')
+
+button1.onclick = function zerar (){
+  modal.show()
+  numero = 0;
+  contadorElemento.innerText = numero;
+}
+buttonCLose.onclick = function () {
+  modal.close()
+}
 
 
 const button = document.querySelector('.btn1')

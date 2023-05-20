@@ -143,6 +143,71 @@ footer {
     text-align: center;
     width: 100%;
 }
+.icon-wrapper{
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+#numero, .icon-wrapper::after{
+    width: 15px;
+    height: 15px;
+    background-color: #a61723;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    opacity: 0;
+    transform:  translateY(3px);
+}
+#numero, .icon-wrapper:hover::after{
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .25s;
+    transform: .25s;
+}
+
+.bell-icon{
+    max-width: 100%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.icon-wrapper:hover .bell-icon{
+    animation: shake 1s forwards;
+}
+.icon-wrapper1{
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+.icon-wrapper1:hover::after{
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .25s;
+    transform: .25s;
+}
+.bell-icon1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-left: 120px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.bell-icon1:hover{
+    background: #eeeaeb;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
 @media (max-width: 956px){
     
     .navbar{
@@ -185,10 +250,6 @@ footer {
         gap: 1rem;
     }
 }
-
-
-
-
 @media (max-width: 1410px){
     .card{
         width: 250px;
@@ -255,5 +316,19 @@ footer {
         text-decoration: none;
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
+    }
+}
+@keyframes shake{
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate(0deg);
     }
 }

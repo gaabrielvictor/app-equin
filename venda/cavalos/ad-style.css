@@ -138,21 +138,7 @@ a{
     display: flex;
     gap: 20px;
 }
-.amount{
-    display: flex;
-    align-items: 30px;
-    gap: 30px;
-    padding: 10px 20px ;
-    width: fit-content;
-    border-radius: 10px;
-}
-.amount span{
-    font-weight: 700;
-    font-size: 12px;
-}
-.minus, .plus{
-    cursor: pointer;
-}
+
 .btn{
     display: inline-block;
     text-decoration: none;
@@ -166,7 +152,9 @@ a{
     gap: 5px;
     font-size: 15px;
     font-weight: 700;
+    cursor: pointer;
 }
+
 @media (max-width: 956px){
     
     .navbar{
