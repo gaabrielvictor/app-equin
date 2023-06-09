@@ -275,3 +275,11 @@ function funcaoLance()
   alert("Lance dado com sucesso!");
 }
 
+function addFavorito(){
+  if (window.Notification&&Notification.permission!=="denied"){
+    Notification.requestPermission(function(status){
+      let n = new Notification ('Cavalo adicionado aos favoritos! ',{
+    })
+    })
+  }
+}

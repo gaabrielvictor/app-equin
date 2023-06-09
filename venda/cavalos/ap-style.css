@@ -134,29 +134,19 @@ a{
     font-weight: 500;
     color: #000000;
 }
-.options{
+
+.buttons{
     display: flex;
+    align-items: 20px;
     gap: 20px;
-}
-.amount{
-    display: flex;
-    align-items: 30px;
-    gap: 30px;
-    padding: 10px 20px ;
+    padding: 5px 0px ;
     width: fit-content;
     border-radius: 10px;
 }
-.amount span{
-    font-weight: 700;
-    font-size: 12px;
-}
-.minus, .plus{
-    cursor: pointer;
-}
 .btn{
     display: inline-block;
-    text-decoration: none;
     color: white;
+    font-weight: 500;
     background-color: #a61723;
     padding: 10px 35px;
     border-radius: 10px;
@@ -166,7 +156,141 @@ a{
     gap: 5px;
     font-size: 15px;
     font-weight: 700;
+    transition: ease-in-out 0.3s;
 }
+.btn:hover{
+    opacity: .80;
+}
+
+.buttons button{
+    background-color: #a61723;
+    padding: 5px 5px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.buttons button:hover{
+    opacity: .80;
+}
+
+.icon-wrapper{
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+#numero, .icon-wrapper::after{
+    width: 15px;
+    height: 15px;
+    background-color: #a61723;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    opacity: 0;
+    transform:  translateY(3px);
+}
+#numero, .icon-wrapper:hover::after{
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .25s;
+    transform: .25s;
+}
+
+.bell-icon{
+    max-width: 100%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.icon-wrapper:hover .bell-icon{
+    animation: shake 1s forwards;
+}
+.icon-wrapper1{
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+.icon-wrapper1:hover::after{
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .25s;
+    transform: .25s;
+}
+.bell-icon1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-left: 120px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.bell-icon1:hover{
+    background: #eeeaeb;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+dialog{
+    border: none;
+    border-radius: 1em;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    width: 30%;
+    height: 350px;
+    max-width: 300px;
+    margin: 0% 78% ;
+    margin-top: 32%;
+    padding: 40px;
+    background: #212122;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+}
+
+.ntf {
+    margin: 10% ;
+    margin-right: 10%;
+    border-radius: 50%;
+    min-width: 10%;
+    width: 60px;
+    height: 60px;
+}
+dialog h2{
+    color: white;
+    margin-top: -25px;
+}
+dialog h3{
+    color: white;
+    background-color: #911d26;
+    border-radius: 1em;
+    margin-top: 15px;
+}
+
+.btnClose{
+    margin: 30% 100px;
+    background-color: #a61723;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+.btnClose:hover{
+    background-color: #911d26;
+}
+
 @media (max-width: 956px){
     
     .navbar{
