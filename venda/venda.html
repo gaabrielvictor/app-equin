@@ -1,35 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-   
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./venda-style.css">
-    <link rel="shortcut icon" href="../logo_equin.png" type="image/x-icon">
     <title>Cavalos á venda</title>
+    <link rel="shortcut icon" href="../logo_equin.png" type="image/x-icon">
+    <link rel="stylesheet" href="../venda/venda.css" />
 </head>
 <body>
     <header>
         <nav class="navigation">
-            <a href="../index.html"><img src="../logo_equin.png" alt="logo da Equin" class="logo"></a>
+            <a href="../../index.html"><img src="../../logo_equin.png" alt="logo da Equin" class="logo"></a>
             <ul class="nav-menu">
-              <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-              <li class="nav-item"><a href="../leilao/leilao.html" class="nav-link">Leilões</a></li>
-              <li class="nav-item"><a href="./venda.html" class="nav-link">Cavalos á venda</a></li>
-              <li class="nav-item"><a href="../sobre/sobre.html" class="nav-link">Sobre nós</a></li>
-              <li class="nav-item"><a href="../login/login.html" class="nav-link">Login</a></li>
-              <div class="icon-wrapper" >
-                <p id="numero"><sub>0</sub></p>
-                <a onclick="zerar()" class="btn0">
-                    <img src="../img/bell-white.svg" alt="Notificações" class="bell-icon">
-                </a>
-              </div>
-              <dialog>
-                <h2>Notificações</h2>
-                <img src="../img/cavalos/CavaloArabe/img3.jpg" class="ntf" alt="img-notificação">
-                <h3>Não há notificações !</h3>
-                <div class="btnClose">x</div>
-            </dialog>
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../leilao/leilao.html" class="nav-link">Leilões</a></li>
+                <li class="nav-item"><a href="../venda/venda.html" class="nav-link">Cavalos á venda</a></li>
+                <li class="nav-item"><a href="../sobre/sobre.html" class="nav-link">Sobre nós</a></li>
+                <li class="nav-item"><a href="../login/login.html" class="nav-link">Login</a></li>
+                    <div class="menu-openner"><span>0</span>🛒</div>
             </ul>
             <div class="navbar">
                 <span class="bar"></span>
@@ -38,202 +26,98 @@
             </div>
         </nav>
     </header>
-        <div class="container">
-            <div class="card card-1">
-                <div class="card-header">
-                    <img src="../img/cavalos/Appaloosa/img4.jpg" class="card-img" alt="card-img">
-                </div>
-                <div class="card-body">
-                  <h3 class="card-titulo">Appaloosa</h3>
-                  <p class="card-texto">
-                    - Extremidades ósseas finas, corpo musculoso.<br>
-                    - Ágil, rústico, veloz e resistente.<br>
-                    - Usado acima de tudo para sela, hipismo rural, corrida plana e lida de gado.
-                  </p>  
-                </div>
-                <div class="card-footer">
-                    <a href="./cavalos/appaloosa.html">Saiba Mais</a>
-                </div>
+    <div class="models">
+
+        <!-- cavalo na lista -->
+        <div class="cavalo-item">
+            <a href="">
+                <div class="cavalo-item--img"><img src="" /></div>
+                <div class="cavalo-item--add">+</div>
+            </a>
+            <div class="cavalo-item--price">R$ --</div>
+            <div class="cavalo-item--name">--</div>
+            <div class="cavalo-item--desc">--</div>
+        </div>
+
+        <!-- cavalo no carrinho -->
+        <div class="cart--item">
+            <img src="" />
+            <div class="cart--item-nome">--</div>
+            <div class="cart--item--qtarea">
+                <button class="cart--item-qtmenos">-</button>
+                <div class="cart--item--qt">1</div>
+                <button class="cart--item-qtmais">+</button>
             </div>
-            <div class="card card-2">
-                <div class="card-header">
-                    <img src="../img/cavalos/Andaluz/img3.jpg" class="card-img" alt="card-img">
+        </div>
+
+    </div>
+    
+    <main>
+        
+        <h2>Cavalos</h2>
+
+        <div class="cavalo-area"></div>
+    </main>
+
+    <aside>
+        <div class="cart--area">
+            <div class="menu-closer">❌</div>
+            <h1>Seus Cavalos</h1>
+            <div class="cart"></div>
+            <div class="cart--details">
+                <div class="cart--totalitem subtotal">
+                    <span>Subtotal</span>
+                    <span>R$ --</span>
                 </div>
-                <div class="card-body">
-                  <h3 class="card-titulo">Andaluz</h3>
-                  <p class="card-texto">
-                    - Considerado o mais antigo cavalo de sela do mundo.<br>
-                    - De marcha elegante, é muito utilizado para montaria em nosso país.<br>
-                    - Inteligente, valente e versátil.
-                  </p>  
+                <div class="cart--totalitem desconto">
+                    <span>Desconto</span>
+                    <span>R$ --</span>
                 </div>
-                <div class="card-footer">
-                    <a href="./cavalos/andaluz.html">Saiba Mais</a>
+                <div class="cart--totalitem total big">
+                    <span>Total</span>
+                    <span>R$ --</span>
                 </div>
+                <div class="cart--finalizar">Finalizar a compra</div>
             </div>
-            <div class="card card-3">
-                <div class="card-header">
-                    <img src="../img/cavalos/Betrao/img5.jpg" class="card-img" alt="card-img">
-                </div>
-                <div class="card-body">
-                  <h3 class="card-titulo">Betrão</h3>
-                  <p class="card-texto">
-                    - Adaptável, rústico e com excelente conversão alimentar<br>
-                    - Usado na tração agrícola, volteio, montaria, desfiles<br>
-                    - Amas de leite” para cavalos de hipismo ou PSI
-                  </p>  
-                </div>
-                <div class="card-footer">
-                    <a href="./cavalos/betrao.html">Saiba Mais</a>
-                </div>
+        </div>
+    </aside>
+
+    <div class="cavaloWindowArea">
+        <div class="cavaloWindowBody">
+            <div class="cavaloInfo--cancelMobileButton">Voltar</div>
+            <div class="cavaloBig">
+                <img src="" />
             </div>
-            <div class="card card-4">
-                <div class="card-header">
-                    <img src="../img/cavalos/Campolina/img2.jpg" class="card-img" alt="card-img">
+            <div class="cavaloInfo">
+                <h1>--</h1>
+                <div class="cavaloInfo--desc">--</div>
+                <div class="cavaloInfo--sizearea">
+                    <div class="cavaloInfo--sector">Tamanho</div>
+                    <div class="cavaloInfo--sizes">
+                        <div data-key="P" class="cavaloInfo--size">PRETO <span>--</span></div>
+                        <div data-key="M" class="cavaloInfo--size">MARROM <span>--</span></div>
+                        <div data-key="B" class="cavaloInfo--size selected">BRANCO <span>--</span></div>
+                    </div>
                 </div>
-                <div class="card-body">
-                  <h3 class="card-titulo">Campolina</h3>
-                  <p class="card-texto">
-                    - Uma das raças de cavalo criada com melhoramento genético<br>
-                    - Forte, ágil, exuberante e com ótima capacidade<br>
-                    - Cavalgadura suave, com menos solavancos ao cavaleiro
-                  </p>  
+                <div class="cavaloInfo--pricearea">
+                    <div class="cavaloInfo--sector">Preço</div>
+                    <div class="cavaloInfo--price">
+                        <div class="cavaloInfo--actualPrice">R$ --</div>
+                        <div class="cavaloInfo--qtarea">
+                            <button class="cavaloInfo--qtmenos">-</button>
+                            <div class="cavaloInfo--qt">1</div>
+                            <button class="cavaloInfo--qtmais">+</button>
+                        </div>
+                        <button onclick="addFavorito()" class="btn"><img src="../img/favorito.svg" alt="favorito"></button>
+                    </div>
                 </div>
-                <div class="card-footer">
-                    <a href="./cavalos/campolina.html">Saiba Mais</a>
-                </div>
-         </div>
-            <div class="card card-1">
-                <div class="card-header">
-                    <img src="../img/cavalos/CavaloArabe/img3.jpg" class="card-img" alt="card-img">
-                </div>
-                <div class="card-body">
-                  <h3 class="card-titulo">Cavalo Árabe</h3>
-                  <p class="card-texto">
-                    - Recuperação fácil após um dia intenso de trabalho<br>
-                    - Temperamento fácil<br> 
-                    - Forte, o que é essencial para atividades pesadas
-                  </p>  
-                </div>
-                <div class="card-footer">
-                    <a href="./cavalos/arabe.html">Saiba Mais</a>
-                </div>
+                <div class="cavaloInfo--addButton">Adicionar ao carrinho</div>
+                <div class="cavaloInfo--cancelButton">Cancelar</div>
             </div>
-            <div class="card card-2">
-                <div class="card-header">
-                    <img src="../img/cavalos/CavaloCrioulo/img4.jpg" class="card-img" alt="card-img">
-                </div>
-                <div class="card-body">
-                  <h3 class="card-titulo">Cavalo Crioulo</h3>
-                  <p class="card-texto">
-                    - Extremamente adaptável as mudanças de temperaturas<br>
-                    - Forte, resistente, de fato, ótimos para a lida na fazenda<br>
-                    - Capaz de percorrer distâncias muito longas
-                  </p>  
-                </div>
-                <div class="card-footer">
-                    <a href="./cavalos/crioulo.html">Saiba Mais</a>
-                </div>
-            </div>
-            <div class="card card-3">
-                <div class="card-header">
-                    <img src="../img/cavalos/Lusitano/img5.jpg" class="card-img" alt="card-img">
-                </div>
-                <div class="card-body">
-                  <h3 class="card-titulo">Lusitano</h3>
-                  <p class="card-texto">
-                    - Muito comodo para o cavaleiro: ágil, elevados e suave<br>
-                    - Dócil, atlético, elegante e robusto.<br>
-                    - Cruzamento com cavalos berberes, conhecido como “cavalo colonizador”.
-                  </p>  
-                </div>
-                <div class="card-footer">
-                    <a href="./cavalos/lusitano.html">Saiba Mais</a>
-                </div>
-            </div>
-            <div class="card card-4">
-                <div class="card-header">
-                    <img src="../img/cavalos/Mangalarga/img3.jpg" class="card-img" alt="card-img">
-                </div>
-                <div class="card-body">
-                  <h3 class="card-titulo">Mangalarga</h3>
-                  <p class="card-texto">
-                    - Principalmente fortes e dóceis<br>
-                    - Muito usados na lida em fazendas e em esportes<br>
-                    - Bom para a sela, andamento impecável
-                  </p>  
-                </div>
-                <div class="card-footer">
-                    <a href="./cavalos/mangalarga.html">Saiba Mais</a>
-                </div>
-          </div>
-            <div class="card card-1">
-                <div class="card-header">
-                    <img src="../img/cavalos/MangalargaMarchador/img3.png" class="card-img" alt="card-img">
-                </div>
-                <div class="card-body">
-                  <h3 class="card-titulo">Mangalarga Marchador</h3>
-                  <p class="card-texto">
-                    - Em síntese, uma das raças de cavalo mais fortes do país<br>
-                    - Utilizados em atividades de lazer ou lidas em fazendas<br>
-                  </p>  
-                </div>
-                <div class="card-footer">
-                    <a href="./cavalos/marchador.html">Saiba Mais</a>
-                </div>
-            </div>
-            <div class="card card-2">
-                <div class="card-header">
-                    <img src="../img/cavalos/Nordestino/img4.jpg" class="card-img" alt="card-img">
-                </div>
-                <div class="card-body">
-                  <h3 class="card-titulo">Nordestino</h3>
-                  <p class="card-texto">
-                    - Animal rústico, de porte médio<br>
-                    - Excelente adaptabilidade<br> 
-                    - Ótima musculatura e cascos bem duros
-                  </p>  
-                </div>
-                <div class="card-footer">
-                    <a href="./cavalos/nordestino.html">Saiba Mais</a>
-                </div>
-            </div>
-            <div class="card card-3">
-                <div class="card-header">
-                    <img src="../img/cavalos/Pampa/img3.jpg" class="card-img" alt="card-img">
-                </div>
-                <div class="card-body">
-                  <h3 class="card-titulo">Pampa</h3>
-                  <p class="card-texto">
-                    - Inegavelmente dóceis, corajosos e vigorosos<br>
-                    - Marchador, ágil e de boa velocidade<br>
-                    - Ótimos para atividades que exigem bastante destreza do cavalo
-                  </p>  
-                </div>
-                <div class="card-footer">
-                    <a href="./cavalos/pampa.html">Saiba Mais</a>
-                </div>
-            </div>
-            <div class="card card-4">
-                <div class="card-header">
-                    <img src="../img/cavalos/QuartodeMilha/img1.jpg" class="card-img" alt="card-img">
-                </div>
-                <div class="card-body">
-                  <h3 class="card-titulo">Quarto de Milha</h3>
-                  <p class="card-texto">
-                    - Dócil e de fácil adestramento<br>
-                    - Velozes e inteligentes, muito usado em competição equestre<br>
-                    - Dotado de grande força, utilizados para realizar o transporte de cargas
-                  </p>  
-                </div>
-                <div class="card-footer">
-                    <a href="./cavalos/quartodemilha.html">Saiba Mais</a>
-                </div>
-             </div>
-         </div>
-      <footer>
-          <p>&copy; 2023 Equin</p>
-      </footer>     
+        </div>
+    </div>   
+    <script src="../venda/cavalos.js"></script>
+    <script src="../venda/js/script.js"></script>
     <script src="../function.js"></script>
 </body>
 </html>
